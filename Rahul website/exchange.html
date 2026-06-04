@@ -1,0 +1,1545 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Returns, Refunds, Cancellations and Exchanges – Urban Step</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.cdnfonts.com/css/yohey" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    * {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: bold;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      overflow-x: clip;
+    }
+
+    body {
+      overflow-x: clip;
+      width: 100%;
+    }
+
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* ── Marquee ── */
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+      color: white;
+      padding: 8px 0;
+    }
+
+    .marquee:hover .marquee-text {
+      animation-play-state: paused;
+    }
+
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 20s linear infinite;
+    }
+
+    .marquee-text span,
+    .marquee a {
+      margin-right: 70px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .marquee a:hover {
+      color: red;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* ── Sticky Nav ── */
+    .nav-sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 9998;
+      background: #222;
+    }
+
+    .nav-sticky-wrap.nav-scrolled {
+      animation: slideDown 0.35s ease forwards;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* ── Logo ── */
+    .logo {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      padding-left: 8px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .logo-nav-wrap {
+      display: flex;
+      align-items: stretch;
+      background: #222;
+      overflow: visible;
+    }
+
+    /* ── Nav ── */
+    .n {
+      background: #222;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    .n a {
+      flex-shrink: 0;
+      position: relative;
+      display: inline-block;
+      font-size: 12px;
+      padding: 6px 8px;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      z-index: 1;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    /* ── Dropdown ── */
+    .menu-item {
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .dropdown-menu-custom {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      background: #eee;
+      display: none;
+      flex-direction: column;
+      padding: 10px 15px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu-custom a {
+      color: black;
+      padding: 5px 0;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .dropdown-menu-custom a:hover {
+      color: red;
+    }
+
+    .menu-item:hover .dropdown-menu-custom {
+      display: flex;
+    }
+
+    .m a:hover {
+      color: red;
+    }
+
+    /* ── Everyday btn ── */
+    .everyday-btn a {
+      background: #e8c24c;
+      color: black;
+      font-weight: bold;
+      padding: 7px 15px;
+      border-radius: 40px;
+      font-size: 14px;
+      display: inline-block;
+      white-space: normal;
+      text-decoration: none;
+    }
+
+    /* ── Search ── */
+    .search {
+      position: relative;
+    }
+
+    .search input {
+      width: 100%;
+      height: 35px;
+      padding: 5px 10px;
+    }
+
+    /* ── Icons ── */
+    .icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      margin-top: 0;
+    }
+
+    .icons a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .icons a:hover {
+      color: red;
+    }
+
+    .icons i {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+
+    /* ── Badge ── */
+    .heart-badge {
+      position: relative;
+      display: inline-block;
+    }
+
+    .badge-count {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      background: red;
+      color: white;
+      font-size: 11px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Login Modal ── */
+    .login-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-overlay.active {
+      display: flex;
+    }
+
+    .login-box {
+      background: #fff;
+      width: 100%;
+      max-width: 350px;
+      padding: 26px 28px 22px;
+      position: relative;
+      animation: loginSlideUp 0.3s ease;
+    }
+
+    @keyframes loginSlideUp {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .login-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 22px;
+      cursor: pointer;
+      color: #222;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+
+    .login-close:hover {
+      color: red;
+    }
+
+    .login-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-logo img {
+      height: 44px;
+      width: auto;
+    }
+
+    .login-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .login-sub {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 24px;
+      font-weight: 400;
+    }
+
+    .login-tabs {
+      display: flex;
+      border-bottom: 2px solid #eee;
+      margin-bottom: 22px;
+    }
+
+    .login-tab {
+      flex: 1;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #999;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .login-tab.active {
+      color: #111;
+      border-bottom: 2px solid #111;
+    }
+
+    .login-field {
+      margin-bottom: 8px;
+    }
+
+    .login-field input {
+      width: 100%;
+      border: 1.5px solid #ddd;
+      padding: 11px 14px;
+      font-size: 13px;
+      outline: none;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 400;
+      transition: border-color 0.2s;
+    }
+
+    .login-field input:focus {
+      border-color: #111;
+    }
+
+    .login-btn {
+      width: 100%;
+      background: #222;
+      color: #fff;
+      border: none;
+      padding: 13px;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin-top: 14px;
+      transition: background 0.2s;
+    }
+
+    .login-btn:hover {
+      background: #000;
+    }
+
+    .login-or {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin: 16px 0;
+      position: relative;
+      font-weight: 400;
+    }
+
+    .login-or::before,
+    .login-or::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: #eee;
+    }
+
+    .login-or::before {
+      left: 0;
+    }
+
+    .login-or::after {
+      right: 0;
+    }
+
+    .login-google {
+      width: 100%;
+      background: #fff;
+      color: #444;
+      border: 1.5px solid #ddd;
+      padding: 11px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: border-color 0.2s;
+    }
+
+    .login-google:hover {
+      border-color: #aaa;
+    }
+
+    .login-google img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .login-forgot {
+      text-align: right;
+      margin-top: 6px;
+    }
+
+    .login-forgot a {
+      font-size: 11px;
+      color: #888;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .login-forgot a:hover {
+      color: red;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    /* ── Floating Buttons ── */
+    .floating-btns {
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      z-index: 9999;
+    }
+
+    .float-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.12);
+    }
+
+    .float-btn.whatsapp {
+      background: #25D366;
+    }
+
+    .float-btn i {
+      font-size: 22px;
+      color: white;
+    }
+
+    .floating-btns-right {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    /* ── Google Badge ── */
+    .google-badge-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #fff;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      padding: 10px 18px 10px 10px;
+      cursor: pointer;
+      max-width: 230px;
+      width: 230px;
+      transition: width 0.6s ease, padding 0.6s ease, border-radius 0.5s ease;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .google-badge-btn.shrunk {
+      width: 52px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .google-badge-btn img {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .badge-text {
+      font-size: 12px;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.3;
+      transition: opacity 0.3s ease;
+      overflow: hidden;
+    }
+
+    .google-badge-btn.shrunk .badge-text {
+      opacity: 0;
+      width: 0;
+      padding: 0;
+    }
+
+    .google-popup {
+      display: none;
+      position: absolute;
+      bottom: 64px;
+      right: 0;
+      width: 300px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      padding: 18px;
+      z-index: 99999;
+      text-align: left;
+    }
+
+    .google-popup.show {
+      display: block;
+    }
+
+    .popup-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .popup-header img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .popup-title {
+      font-weight: 800;
+      font-size: 14px;
+      color: #111;
+    }
+
+    .popup-subtitle {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .popup-desc {
+      font-size: 12px;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .popup-link {
+      font-size: 12px;
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .popup-divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 12px 0;
+    }
+
+    .popup-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 9px;
+    }
+
+    .popup-row-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .popup-row-sub {
+      font-size: 11px;
+      color: #777;
+    }
+
+    .popup-rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: #34a853;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #000;
+      padding: 40px 0;
+    }
+
+    .footer h6 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    .footer-line {
+      border-color: #333;
+      margin: 30px 0;
+    }
+
+    .payments {
+      margin-top: 15px;
+    }
+
+    .payments i {
+      font-size: 40px;
+      color: white;
+      margin: 0 15px;
+      opacity: 1;
+    }
+
+    .payments i:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+    }
+
+    .social-icons i {
+      color: white;
+      margin: 0 8px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .social-icons i:hover {
+      color: red;
+      transform: scale(1.4);
+      transition: 0.3s;
+    }
+
+    .signup-title {
+      color: #fff;
+    }
+
+    .signup-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .signup-form input {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background: #e5e5e5;
+      border-radius: 0;
+    }
+
+    .signup-form button {
+      padding: 14px 30px;
+      background: black;
+      color: white;
+      border: 1px solid #999;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 0;
+    }
+
+    .signup-form button:hover {
+      background: #111;
+    }
+
+    /* ── Policy Page ── */
+    .policy-section {
+      background: #f7f7f7;
+      padding: 50px 20px 70px;
+    }
+
+    .policy-wrap {
+      background: #fff;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 54px 54px;
+    }
+
+    .policy-wrap h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #111;
+      margin-bottom: 30px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #eee;
+    }
+
+    .policy-wrap h2 {
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #111;
+      margin-top: 36px;
+      margin-bottom: 14px;
+    }
+
+    .policy-wrap h3 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #111;
+      margin-top: 22px;
+      margin-bottom: 10px;
+    }
+
+    .policy-wrap p {
+      font-size: 18px;
+      font-weight: 400;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .policy-wrap ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .policy-wrap ul li {
+      font-size: 18px;
+      font-weight: 400;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+
+    .policy-wrap strong {
+      font-weight: bold;
+      color: #111;
+    }
+
+    .policy-wrap .policy-note {
+      background: #f9f9f9;
+      border-left: 3px solid #222;
+      padding: 14px 18px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    .policy-wrap .policy-note p {
+      margin: 0;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .policy-divider {
+      border: none;
+      border-top: 1px solid #eee;
+      margin: 30px 0;
+    }
+
+    /* ── Responsive Header ── */
+    @media (max-width: 991px) {
+      .header-row-1 {
+        display: flex;
+        align-items: stretch;
+        background: #222;
+        overflow: visible;
+        position: relative;
+        z-index: 999;
+      }
+
+      .logo-nav-col {
+        flex: 1;
+        min-width: 0;
+        overflow: visible;
+      }
+
+      .logo-nav-wrap {
+        width: 100%;
+      }
+
+      .logo {
+        height: 48px;
+        padding-left: 6px;
+        flex-shrink: 0;
+      }
+
+      .logo img {
+        height: 36px;
+      }
+
+      .n {
+        flex: 1;
+        min-width: 0;
+        gap: 0;
+        padding: 0;
+        height: 48px;
+        min-height: 48px;
+        overflow: hidden;
+      }
+
+      .menu-item {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .n a {
+        font-size: 10px;
+        padding: 4px 3px;
+        white-space: nowrap;
+        text-align: center;
+        width: 100%;
+      }
+
+      .icons-col {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        background: #222;
+      }
+
+      .icons {
+        gap: 10px;
+      }
+
+      .icons i {
+        margin-left: 0;
+        font-size: 16px;
+      }
+
+      .header-row-2 {
+        display: flex;
+        align-items: center;
+        background: #222;
+        padding: 5px 8px;
+        gap: 8px;
+      }
+
+      .everyday-btn-col {
+        flex-shrink: 0;
+      }
+
+      .everyday-btn a {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+
+      .search-col {
+        flex: 1;
+      }
+
+      .search input {
+        height: 32px;
+      }
+
+      .policy-wrap {
+        padding: 30px 20px 36px;
+      }
+
+      .policy-wrap h1 {
+        font-size: 20px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .header-row-1 {
+        display: none !important;
+      }
+
+      .header-row-2 {
+        display: none !important;
+      }
+
+      .desktop-header {
+        display: flex !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .desktop-header {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Login Modal ── -->
+  <div class="login-overlay" id="loginOverlay" onclick="closeLoginOnOverlay(event)">
+    <div class="login-box">
+      <button class="login-close" onclick="closeLogin()">&#10005;</button>
+      <div class="login-logo">
+        <img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg">
+      </div>
+      <div class="login-title">Welcome Back</div>
+      <div class="login-sub">Sign in to your Urban Step account</div>
+      <div class="login-tabs">
+        <div class="login-tab active" onclick="switchTab('login')">Login</div>
+        <div class="login-tab" onclick="switchTab('signup')">Sign Up</div>
+      </div>
+      <div class="tab-panel active" id="panel-login">
+        <div class="login-field"><input type="email" placeholder="Email Address"></div>
+        <div class="login-field"><input type="password" placeholder="Password"></div>
+        <div class="login-forgot"><a href="#">Forgot Password?</a></div>
+        <button class="login-btn">Login</button>
+        <div class="login-or">or</div>
+        <button class="login-google">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+          Continue with Google
+        </button>
+      </div>
+      <div class="tab-panel" id="panel-signup">
+        <div class="login-field"><input type="text" placeholder="Full Name"></div>
+        <div class="login-field"><input type="email" placeholder="Email Address"></div>
+        <div class="login-field"><input type="password" placeholder="Password"></div>
+        <div class="login-field"><input type="password" placeholder="Confirm Password"></div>
+        <button class="login-btn">Create Account</button>
+        <div class="login-or">or</div>
+        <button class="login-google">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+          Continue with Google
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Marquee ── -->
+  <div class="container-fluid p-0" style="background:#000;">
+    <div class="row g-0">
+      <div class="col-12">
+        <div class="marquee">
+          <div class="marquee-text">
+            <a href="#">Our #EverydayRaces Sport Shoes Collection Live</a>
+            <span>2 Million + Happy Customers</span>
+            <span>Free Shipping on prepaid orders.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Sticky Nav ── -->
+  <div class="nav-sticky-wrap" id="navStickyWrap">
+
+    <!-- Desktop Header -->
+    <div class="row align-items-center g-2 desktop-header">
+      <div class="col-lg-2 col-md-3 col-6 order-1">
+        <div class="logo">
+          <img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-9 col-6 order-2">
+        <nav class="n">
+          <div class="menu-item m">
+            <a href="#">Women</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Sneakers</a><a href="#">Loafers</a><a href="#">Slip-Ons</a>
+              <a href="#">#EverydayRaces Sport Shoes</a><a href="#">Sandals</a>
+              <a href="#">Flats</a><a href="#">Slippers</a><a href="#">Sliders</a>
+              <a href="#">Clogs</a><a href="#">Boots</a><a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Men</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Sneakers</a><a href="#">Loafers</a><a href="#">Slip-Ons</a>
+              <a href="#">#EverydayRaces Sport Shoes</a><a href="#">Sandals</a>
+              <a href="#">Big Size</a><a href="#">Slippers</a><a href="#">Sliders</a>
+              <a href="#">Clogs</a><a href="#">Boots</a><a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Kids</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Slippers</a><a href="#">Clogs</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Brands</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Gucci</a><a href="#">Puma</a><a href="#">Nike</a>
+              <a href="#">Clarks</a><a href="#">Timberlands</a>
+              <a href="#">Stuart Weitzman</a><a href="#">Steve Madden</a>
+              <a href="#">Nike Kids</a><a href="#">Geox Kids</a>
+              <a href="#">Red Tape</a><a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m"><a href="#">Sale</a></div>
+        </nav>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 order-3 order-md-3">
+        <div class="everyday-btn"><a href="#">#EVERYDAYRACES SPORT SHOES ⚡</a></div>
+      </div>
+      <div class="col-lg-2 col-md-8 col-5 order-4 order-md-4">
+        <div class="search"><input type="text" placeholder="Search" autocomplete="off"></div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-3 order-5">
+        <div class="icons">
+          <a href="javascript:void(0)" onclick="openLogin()"><i class="fa fa-user"></i></a>
+          <a href="#" class="heart-badge"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+          <a href="#" class="heart-badge"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Header Row 1 -->
+    <div class="header-row-1">
+      <div class="logo-nav-col">
+        <div class="logo-nav-wrap">
+          <div class="logo">
+            <img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg">
+          </div>
+          <nav class="n">
+            <div class="menu-item">
+              <a href="#">Women</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Sneakers</a><a href="#">Loafers</a><a href="#">Slip-Ons</a>
+                <a href="#">#EverydayRaces Sport Shoes</a><a href="#">Sandals</a>
+                <a href="#">Flats</a><a href="#">Slippers</a><a href="#">Sliders</a>
+                <a href="#">Clogs</a><a href="#">Boots</a><a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Men</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Sneakers</a><a href="#">Loafers</a><a href="#">Slip-Ons</a>
+                <a href="#">#EverydayRaces Sport Shoes</a><a href="#">Sandals</a>
+                <a href="#">Big Size</a><a href="#">Slippers</a><a href="#">Sliders</a>
+                <a href="#">Clogs</a><a href="#">Boots</a><a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Kids</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Slippers</a><a href="#">Clogs</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Brands</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Gucci</a><a href="#">Puma</a><a href="#">Nike</a>
+                <a href="#">Clarks</a><a href="#">Timberlands</a>
+                <a href="#">Stuart Weitzman</a><a href="#">Steve Madden</a>
+                <a href="#">Nike Kids</a><a href="#">Geox Kids</a>
+                <a href="#">Red Tape</a><a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item"><a href="#">Sale</a></div>
+          </nav>
+        </div>
+      </div>
+      <div class="icons-col">
+        <div class="icons">
+          <a href="javascript:void(0)" onclick="openLogin()"><i class="fa fa-user"></i></a>
+          <a href="#" class="heart-badge"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+          <a href="#" class="heart-badge"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-row-2">
+      <div class="everyday-btn-col">
+        <div class="everyday-btn"><a href="#">#EVERYDAYRACES SPORT SHOES ⚡</a></div>
+      </div>
+      <div class="search-col">
+        <div class="search"><input type="text" placeholder="Search" autocomplete="off"></div>
+      </div>
+    </div>
+  </div>
+  <!-- ── Policy Content ── -->
+  <section class="policy-section">
+    <div class="policy-wrap">
+      <h1>Returns, Refunds, Cancellations and Exchanges</h1>
+      <!-- Delivery -->
+      <h2>Delivery</h2>
+      <p><strong>What We Will Do Together:</strong></p>
+      <ul>
+        <li>
+          Product(s) are shipped from our own or third-party warehouses/stores/offices from various points in India.
+          Our endeavour is to make the Product(s) reach you within <strong>3–5 business days</strong> from receipt of order
+          and payment depending on the address for delivery.
+        </li>
+        <li>
+          Order deliveries will be made by our own staff or third-party courier and logistics companies or postal services
+          usually between <strong>10:30 AM – 7:00 PM, Monday – Saturday</strong>.
+        </li>
+        <li>
+          The customer must sign signifying the collection of the Product(s) upon delivery. We take no responsibility
+          for Product(s) signed by an alternative person other than the person ordering the Product(s) at the address
+          indicated at the time of the order.
+        </li>
+        <li>
+          Since the transactions are authorised by the card holder, we do not take responsibility for incorrect addresses
+          provided at the time of placing the order.
+        </li>
+        <li>
+          We are not responsible for damage of Product(s) after delivery.
+        </li>
+        <li>
+          All claims, if any, for shortages or damages must be reported to customer service on the <strong>day of delivery</strong>
+          through the Contact Us page on the web store. The said shortage of Product(s) also needs to be highlighted and
+          signed on the proof of delivery copy and returned to the delivery person.
+        </li>
+        <li>
+          In case your order has not been delivered but is reflecting "Delivered" on the tracker, please highlight it
+          within <strong>24 hours</strong> or else we will not be able to process your request.
+        </li>
+      </ul>
+      <h3>Delivery Charges</h3>
+      <ul>
+        <li>
+          Shipping and handling rates may vary based on Product(s), packaging, size, volume, type and other considerations.
+          The shipping and handling charges are given at the time of checkout and the same will be intimated to the customer
+          prior to making payments.
+        </li>
+      </ul>
+      <h3>Out of Stock Situations</h3>
+      <ul>
+        <li>
+          Our endeavour is to ensure that all Product(s) listed on the site are available in stock for dispatch to the customer.
+          However, in case the same is not available for any reason, we will contact you within <strong>2 business days</strong>
+          and give you the option to exchange, delay or cancel the order based on your convenience.
+        </li>
+      </ul>
+      <hr class="policy-divider">
+      <!-- Replacement / Return -->
+      <h2>Replacement / Return</h2>
+      <p>
+        <strong>Step 1</strong> – Raise a return / replacement request within <strong>7 days</strong> from the date of delivery
+        if you've received a wrong or expired product. Please raise a request with your order and contact details via the Chat option.
+        In case of damaged or missing product(s), raise a return / replacement request within <strong>2 days</strong> from the
+        date of delivery.
+      </p>
+      <p>
+        <strong>Step 2</strong> – Give us <strong>2 working days</strong> to review your return request.
+      </p>
+      <p>
+        <strong>Step 3</strong> – After reviewing your return request, we will send our courier partner to pick up the products
+        delivered to you.
+      </p>
+      <p>
+        <strong>Step 4</strong> – In case our reverse pick-up service is not available at your location, you will need to
+        self-ship the product via any reliable courier partner. We will reimburse the courier charges to your Wallet.
+      </p>
+      <p>
+        <strong>Step 5</strong> – After your product(s) is received, we will verify it against the claim and initiate the
+        replacement or refund accordingly. Please note that replacement will depend upon stock availability.
+      </p>
+      <h3>Under what conditions can I return / replace my product?</h3>
+      <ul>
+        <li>Expired product delivered</li>
+        <li>Damaged product delivered – physical damage / tampered product or packaging</li>
+        <li>Incomplete order – missing products</li>
+        <li>In case of wrong product delivered, we require customers to submit video evidence of the unboxing process as proof.</li>
+      </ul>
+      <h3>Under what conditions will return / replacement requests NOT be accepted?</h3>
+      <ul>
+        <li>Opened / used / altered products</li>
+        <li>Original packaging (mono cartons, labels, etc.) missing</li>
+        <li>Socks and shoe care products are not part of the return policy</li>
+      </ul>
+      <div class="policy-note">
+        <p>
+          The return / replacement request must be generated within <strong>7 days</strong> from the date of delivery.
+          Damaged or missing products must be reported within <strong>2 days</strong> from the date of delivery.
+        </p>
+      </div>
+      <h3>How are returns processed?</h3>
+      <p>
+        Once you request to return a product, a pick-up is organised for the item. Our courier partners will come to pick up
+        the item within <strong>5–7 business days</strong> after your return request has been received. This item is then
+        brought back to our warehouse where it is checked by our quality control team. Once the product passes quality control,
+        a refund is initiated.
+      </p>
+      <hr class="policy-divider">
+      <!-- Cancellations -->
+      <h2>Cancellations</h2>
+      <p>
+        You can cancel your order from the <strong>Cancel</strong> button on the order details page under the My Account section.
+        Simply provide a reason for cancellation and leave the rest to us.
+      </p>
+      <p>
+        OR – Please call us on <strong>+91-9XXXXXXXXX</strong> (Mon–Fri, 9 AM to 6 PM) and we will help you cancel the order.
+      </p>
+      <div class="policy-note">
+        <p>
+          <strong>Urban Step reserves the right to cancel any order without pre-confirming the customer at any time</strong>
+          and may verify any order before shipping, which may include verbal or written confirmation from the customer.
+        </p>
+      </div>
+      <p>
+        <em>Note – Orders can only be cancelled until the status is "Ready to Ship".</em>
+      </p>
+      <p>
+        No cancellations are entertained for Product(s) that have been obtained on special occasions. These are limited
+        occasion / festive offers and therefore cancellations are not possible.
+      </p>
+      <p>
+        In case a Product(s) is purchased using a discount coupon, cancellation of the same will not deem the coupon to
+        be re-usable. A particular discount coupon may be used only once.
+      </p>
+      <hr class="policy-divider">
+      <!-- Refunds -->
+      <h2>Refunds</h2>
+      <h3>How will I receive my refund for a cancelled or returned product?</h3>
+      <p>
+        In case of prepaid orders, money will be returned to the bank account, credit/debit card, or the payment source
+        within <strong>7 business working days</strong>. For Cash on Delivery orders, customers will be required to provide
+        bank details where they would like to receive the refund.
+      </p>
+      <h3>How long does it take to receive a refund?</h3>
+      <p>
+        We will process your refund within <strong>7 business days</strong> in case of cancellation of an order. In case of
+        returns, we will refund the money after the product has been received by our warehouse and post completion of quality
+        check. Please note, this entire process takes <strong>2 weeks</strong> after the return has been picked up.
+      </p>
+      <h3>Can I return part of my order?</h3>
+      <p>
+        Yes. You can return any products that are eligible for returns within <strong>7 days</strong> of delivery.
+      </p>
+      <hr class="policy-divider">
+      <!-- Security -->
+      <h2>Security</h2>
+      <ul>
+        <li>
+          Customers may use debit card / credit card / net banking / UPI or any other stipulated payment method.
+          The customer must provide accurate and complete bank account details and will be liable for any inaccuracies
+          or incomplete information.
+        </li>
+        <li>
+          In order to take preventive measures against fraud, the customer must provide the required information when requested.
+          We reserve the right to delay or cancel orders in case we detect suspicious or fraudulent transactions. However,
+          we will not be liable for the occurrence of any fraudulent transaction.
+        </li>
+        <li>
+          Transactions on the website are protected by <strong>SSL (Secure Sockets Layer)</strong> and <strong>SDE (Secure Data Encryption)</strong>
+          using a 1024-bit process. Any information you enter when transacting is sent in a Secure Socket Layer session and
+          is encrypted to protect you against unintentional disclosure to third parties.
+        </li>
+        <li>
+          Credit card and Debit card information is not stored by us. This information is obtained directly by the
+          payment gateway provider who is authorised and compliant with applicable laws, regulations and requirements.
+        </li>
+        <li>
+          To report security vulnerabilities, send an email to <strong>rahulchauhan@gmail.com</strong>.
+        </li>
+      </ul>
+      <hr class="policy-divider">
+      <!-- Return and Exchange Request Identification -->
+      <h2>Return and Exchange Request Identification</h2>
+      <p>
+        For all return and exchange requests initiated through Urban Step's chat portal or customer support channels,
+        the customer's <strong>Order ID will serve as the primary identifier</strong> for processing and tracking purposes.
+      </p>
+      <p>
+        Customers must provide their Order ID when submitting any return or exchange request. The Order ID shall be the
+        official reference for all communications and status updates related to your return or exchange.
+        Requests submitted without a valid Order ID cannot be processed.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Floating WhatsApp Button ── -->
+  <div class="floating-btns">
+    <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="float-btn whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ── Floating Google Button ── -->
+  <div class="floating-btns-right">
+    <div class="google-popup" id="googlePopup">
+      <div class="popup-header">
+        <img src="https://www.gstatic.com/images/branding/product/2x/shopping_96dp.png" alt="Google">
+        <div>
+          <div class="popup-title">Top Quality Store</div>
+          <div class="popup-subtitle">on Google</div>
+        </div>
+      </div>
+      <p class="popup-desc">The Top Quality Store badge is awarded to merchants that provide a great shopping experience.</p>
+      <a href="#" class="popup-link">Learn more about Top Quality Store</a>
+      <hr class="popup-divider">
+      <div class="popup-row">
+        <div><div class="popup-row-label">Delivery</div><div class="popup-row-sub">Free 3-5 day delivery</div></div>
+        <div class="popup-rating"><span class="dot"></span> Great</div>
+      </div>
+      <div class="popup-row">
+        <div><div class="popup-row-label">Returns</div><div class="popup-row-sub">7-day returns for most items</div></div>
+        <div class="popup-rating"><span class="dot"></span> Exceptional</div>
+      </div>
+      <div class="popup-row">
+        <div><div class="popup-row-label">Competitive pricing</div></div>
+        <div class="popup-rating"><span class="dot"></span> Good</div>
+      </div>
+      <div class="popup-row">
+        <div><div class="popup-row-label">Payment options</div></div>
+        <div class="popup-rating"><span class="dot"></span> Great</div>
+      </div>
+      <hr class="popup-divider">
+      <a href="#" class="popup-link">More about this shop</a>
+    </div>
+    <button class="google-badge-btn" id="googleBadgeBtn" onclick="toggleGooglePopup()">
+      <img src="https://www.gstatic.com/images/branding/productlogos/top_quality_store/v1/192px.svg" alt="Google">
+      <span class="badge-text">Top Quality Store on Google</span>
+    </button>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-md-6">
+          <div class="newsletter text-center">
+            <p class="signup-title">STAY CONNECTED WITH US</p>
+            <div class="signup-form">
+              <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS HERE">
+              <button>SIGN UP</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-white mt-4 ms-5">
+      <div class="col-md-4">
+        <h6>GET IN TOUCH</h6>
+        <p>Mail: rahulchauhan@gmail.com</p>
+        <p>Call: +91-9XXXXXXXXX</p>
+        <p>Chat: +91-9XXXXXXXXX (Whatsapp)</p>
+        <p>Rajkot, India</p>
+      </div>
+      <div class="col-md-4">
+        <h6>SHOP</h6>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="openLogin()">My Account</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="track.html">Track your order</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6>COMPANY</h6>
+        <ul class="footer-links">
+          <li><a href="know2.html">Our Story</a></li>
+          <li><a href="know.html">Our Technology</a></li>
+          <li><a href="exchange.html">Returns &amp; Exchange Policy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="redresel.html">Grievance Redressal</a></li>
+          <li><a href="condition.html">Terms & Condition</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-line">
+    <div class="text-center mb-3">
+      <p class="text-white">100% Secure Payments | 7-Day Return &amp; Exchange</p>
+      <div class="payments text-center">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+        <i class="fa-brands fa-cc-discover"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-stripe"></i>
+        <i class="fa-brands fa-cc-amazon-pay"></i>
+        <i class="fa-brands fa-google-pay"></i>
+        <i class="fa-solid fa-credit-card"></i>
+      </div>
+    </div>
+    <div class="text-center social-icons pb-3">
+      <p class="text-white">FOLLOW US</p>
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('.menu-item > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var dropdown = this.parentElement.querySelector('.dropdown-menu-custom');
+        if (!dropdown) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = dropdown.classList.contains('open');
+        document.querySelectorAll('.dropdown-menu-custom').forEach(function(d) {
+          d.classList.remove('open');
+          d.style.display = 'none';
+          d.style.position = d.style.top = d.style.left = d.style.width = d.style.zIndex = '';
+        });
+        if (!isOpen) {
+          var rect = this.parentElement.getBoundingClientRect();
+          dropdown.style.position = 'fixed';
+          dropdown.style.top      = rect.bottom + 'px';
+          dropdown.style.left     = rect.left + 'px';
+          dropdown.style.width    = '180px';
+          dropdown.style.zIndex   = '99999';
+          dropdown.style.display  = 'flex';
+          dropdown.classList.add('open');
+        }
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.menu-item')) {
+        document.querySelectorAll('.dropdown-menu-custom').forEach(function(d) {
+          d.classList.remove('open');
+          d.style.display = 'none';
+        });
+      }
+      if (!e.target.closest('.floating-btns-right')) {
+        document.getElementById('googlePopup').classList.remove('show');
+      }
+    });
+
+    var navWrap = document.getElementById('navStickyWrap');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 40) {
+        navWrap.classList.add('nav-scrolled');
+      } else {
+        navWrap.classList.remove('nav-scrolled');
+      }
+    });
+
+    setTimeout(function() {
+      document.getElementById('googleBadgeBtn').classList.add('shrunk');
+    }, 3000);
+
+    function toggleGooglePopup() {
+      document.getElementById('googlePopup').classList.toggle('show');
+    }
+
+    function openLogin() {
+      document.getElementById('loginOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLogin() {
+      document.getElementById('loginOverlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeLoginOnOverlay(e) {
+      if (e.target === document.getElementById('loginOverlay')) closeLogin();
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.login-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelector('.login-tab[onclick="switchTab(\'' + tab + '\')"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLogin();
+    });
+  </script>
+
+</body>
+</html>
