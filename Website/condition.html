@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms & Conditions – Urban Step</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.cdnfonts.com/css/yohey" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    * { 
+      font-family: "Roboto Condensed", sans-serif; 
+      font-weight: bold; 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+    html { 
+      overflow-x: clip; 
+    }
+    body { 
+      overflow-x: clip; 
+      width: 100%; 
+    }
+    .row { 
+      margin-left: 0; 
+      margin-right: 0; 
+    }
+
+    /* ── Marquee ── */
+    .marquee { 
+      width: 100%; 
+      overflow: hidden; 
+      background: #000; 
+      color: white; 
+      padding: 8px 0; 
+    }
+    .marquee:hover .marquee-text { 
+      animation-play-state: paused; 
+    }
+    .marquee-text { 
+      display: inline-block; 
+      white-space: nowrap; 
+      animation: scroll 20s linear infinite; 
+    }
+    .marquee-text span, .marquee a { 
+      margin-right: 70px; 
+      color: white; 
+      text-decoration: none; 
+    }
+    .marquee a:hover { 
+      color: red; 
+    }
+    @keyframes scroll { 
+      0% { 
+        transform: translateX(100%); 
+      }
+      100% { 
+        transform: translateX(-100%); 
+      } 
+    }
+
+    /* ── Sticky Nav ── */
+    .nav-sticky-wrap { 
+      position: sticky;
+      top: 0; 
+      z-index: 9998; 
+      background: #222; 
+    }
+    .nav-sticky-wrap.nav-scrolled { 
+      animation: slideDown 0.35s ease forwards; 
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4); 
+    }
+    @keyframes slideDown { 
+      0% { 
+        transform: translateY(-100%); 
+      } 
+      100% { 
+        transform: translateY(0); 
+      } 
+    }
+
+    /* ── Logo ── */
+    .logo { 
+      height: 60px; 
+      display: flex; 
+      align-items: center; 
+      flex-shrink: 0; 
+      padding-left: 8px; 
+    }
+    .logo img { 
+      height: 50px; 
+      width: auto; 
+    }
+    .logo-nav-wrap { 
+      display: flex; 
+      align-items: stretch;
+      background: #222; 
+      overflow: visible; 
+    }
+
+    /* ── Nav ── */
+    .n { 
+      background: #222; 
+      min-height: 60px; 
+      display: flex; 
+      align-items: center; 
+      gap: 20px; 
+      flex-wrap: nowrap; 
+    }
+    .n a { 
+      flex-shrink: 0; 
+      position: relative; 
+      display: inline-block; 
+      font-size: 12px; 
+      padding: 6px 8px; 
+      text-transform: uppercase; 
+      color: #fff; 
+      text-decoration: none; 
+      z-index: 1; 
+      text-align: center; 
+      white-space: nowrap; 
+    }
+
+    /* ── Dropdown ── */
+    .menu-item { 
+      position: relative; 
+      flex-shrink: 0; 
+    }
+    .dropdown-menu-custom { 
+      position: absolute; 
+      top: 100%; 
+      left: 0; 
+      width: 200px; 
+      background: #eee; 
+      display: none; 
+      flex-direction: column; 
+      padding: 10px 15px; 
+      z-index: 1000; 
+    }
+    .dropdown-menu-custom a { 
+      color: black; 
+      padding: 5px 0; 
+      text-decoration: none; 
+      font-size: 13px; 
+    }
+    .dropdown-menu-custom a:hover { 
+      color: red; 
+    }
+    .menu-item:hover .dropdown-menu-custom { 
+      display: flex; 
+    }
+    .m a:hover { 
+      color: red; 
+    }
+
+    /* ── Everyday btn ── */
+    .everyday-btn a { 
+      background: #e8c24c; 
+      color: black; 
+      font-weight: bold; 
+      padding: 7px 15px; 
+      border-radius: 40px; 
+      font-size: 14px; 
+      display: inline-block; 
+      white-space: normal; 
+      text-decoration: none; 
+    }
+
+    /* ── Search ── */
+    .search { 
+      position: relative; 
+    }
+    .search input { 
+      width: 100%; 
+      height: 35px; 
+      padding: 5px 10px; 
+    }
+
+    /* ── Icons ── */
+    .icons { 
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center; 
+      gap: 20px; 
+      margin-top: 0; 
+    }
+    .icons a { 
+      color: white; 
+      text-decoration: none; 
+      text-transform: uppercase; 
+    }
+    .icons a:hover { 
+      color: red; 
+    }
+    .icons i { 
+      margin-left: 10px; 
+      font-size: 20px; 
+    }
+
+    /* ── Badge ── */
+    .heart-badge { 
+      position: relative; 
+      display: inline-block; 
+    }
+    .badge-count { 
+      position: absolute; 
+      top: -8px; 
+      right: -10px; 
+      background: red; 
+      color: white; 
+      font-size: 11px; 
+      width: 18px; 
+      height: 18px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+    }
+
+    /* ── Login Modal ── */
+    .login-overlay { 
+      display: none; 
+      position: fixed; 
+      inset: 0; 
+      background: rgba(0,0,0,0.65); 
+      z-index: 99999; 
+      align-items: center; 
+      justify-content: center; 
+    }
+    .login-overlay.active { 
+      display: flex; 
+    }
+    .login-box { 
+      background: #fff; 
+      width: 100%; 
+      max-width: 350px; 
+      padding: 26px 28px 22px; 
+      position: relative; 
+      animation: loginSlideUp 0.3s ease; 
+    }
+    @keyframes loginSlideUp { 
+      0% { 
+        transform: translateY(30px); 
+        opacity: 0; 
+      } 
+        100% {
+         transform: translateY(0); 
+         opacity: 1; 
+       } 
+     }
+    .login-close { 
+      position: absolute; 
+      top: 14px; 
+      right: 18px; 
+      font-size: 22px; 
+      cursor: pointer; 
+      color: #222; 
+      background: none; 
+      border: none; 
+      line-height: 1; 
+    }
+    .login-close:hover { 
+      color: red; 
+    }
+    .login-logo { 
+      text-align: center; 
+      margin-bottom: 20px; 
+    }
+    .login-logo img { 
+      height: 44px; 
+      width: auto; 
+    }
+    .login-title { 
+      text-align: center; 
+      font-size: 20px; 
+      font-weight: bold; 
+      color: #111; 
+      margin-bottom: 6px; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+    }
+    .login-sub { 
+      text-align: center; 
+      font-size: 12px; 
+      color: #888; 
+      margin-bottom: 24px; 
+      font-weight: 400; 
+    }
+    .login-tabs { 
+      display: flex; 
+      border-bottom: 2px solid #eee; 
+      margin-bottom: 22px; 
+    }
+    .login-tab { 
+      flex: 1; 
+      text-align: center; 
+      padding: 8px 0; 
+      font-size: 13px; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      cursor: pointer; 
+      color: #999; 
+      letter-spacing: 0.5px; 
+      border-bottom: 2px solid transparent; 
+      margin-bottom: -2px; 
+      transition: color 0.2s, border-color 0.2s; 
+    }
+    .login-tab.active { 
+      color: #111; 
+      border-bottom: 2px solid #111; 
+    }
+    .login-field { 
+      margin-bottom: 8px; 
+    }
+    .login-field input { 
+      width: 100%; 
+      border: 1.5px solid #ddd; 
+      padding: 11px 14px; 
+      font-size: 13px; 
+      outline: none; 
+      font-family: "Roboto Condensed", sans-serif; 
+      font-weight: 400;
+      
+      transition: border-color 0.2s; 
+    }
+    .login-field input:focus { 
+      border-color: #111; 
+    }
+    .login-btn { 
+      width: 100%; 
+      background: #222; 
+      color: #fff; 
+      border: none; 
+      padding: 13px; 
+      font-size: 14px; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      cursor: pointer; 
+      margin-top: 14px; 
+      transition: background 0.2s; 
+    }
+    .login-btn:hover { 
+      background: #000; 
+    }
+    .login-or { 
+      text-align: center;
+      font-size: 12px; 
+      color: #aaa; 
+      margin: 16px 0; 
+      position: relative; 
+      font-weight: 400; 
+    }
+    .login-or::before, .login-or::after { 
+      content: ''; 
+      position: absolute; 
+      top: 50%; 
+      width: 42%; 
+      height: 1px; 
+      background: #eee; 
+    }
+    .login-or::before { 
+      left: 0; 
+    }
+    .login-or::after { 
+      right: 0; 
+    }
+    .login-google { 
+      width: 100%; 
+      background: #fff; 
+      color: #444; 
+      border: 1.5px solid #ddd; 
+      padding: 11px; 
+      font-size: 13px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 10px; 
+      transition: border-color 0.2s; 
+    }
+    .login-google:hover { 
+      border-color: #aaa; 
+    }
+    .login-google img { 
+      width: 18px; 
+      height: 18px; 
+    }
+    .login-forgot { 
+      text-align: right; 
+      margin-top: 6px; 
+    }
+    
+    .login-forgot a { 
+      font-size: 11px; 
+      color: #888; 
+      text-decoration: none; 
+      font-weight: 400; 
+    }
+    .login-forgot a:hover { 
+      color: red; 
+    }
+    .tab-panel { 
+      display: none; 
+    }
+    .tab-panel.active { 
+      display: block; 
+    }
+
+    /* ── Floating Buttons ── */
+    .floating-btns { 
+      position: fixed; 
+      bottom: 24px; 
+      left: 20px; 
+      z-index: 9999; 
+    }
+    .float-btn { 
+      width: 52px; 
+      height: 52px; 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-decoration: none; 
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25); 
+      transition: transform 0.2s ease; 
+      cursor: pointer; 
+    }
+    .float-btn:hover { 
+      transform: scale(1.12); 
+    }
+    .float-btn.whatsapp { 
+      background: #25D366; 
+    }
+    .float-btn i {
+      font-size: 22px; color: white; 
+    }
+    .floating-btns-right { 
+      position: fixed; 
+      bottom: 24px; 
+      right: 20px; 
+      z-index: 9999; 
+    }
+
+    /* ── Google Badge ── */
+    .google-badge-btn { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      background: #fff; 
+      border: none; border-radius: 50px; 
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2); 
+      padding: 10px 18px 10px 10px; 
+      cursor: pointer; 
+      max-width: 230px; 
+      width: 230px; 
+      transition: width 0.6s ease, padding 0.6s ease, border-radius 0.5s ease; 
+      overflow: hidden; 
+      white-space: nowrap; 
+    }
+    .google-badge-btn.shrunk { 
+      width: 52px;
+      padding: 10px; 
+      border-radius: 50%; 
+    }
+    .google-badge-btn img { 
+      width: 32px; 
+      height: 32px; 
+      flex-shrink: 0; 
+    }
+    .badge-text { 
+      font-size: 12px; 
+      font-weight: 700; 
+      color: #111; 
+      line-height: 1.3; 
+      transition: opacity 0.3s ease; 
+      overflow: hidden; 
+    }
+    .google-badge-btn.shrunk .badge-text { 
+      opacity: 0; 
+      width: 0; 
+      padding: 0; 
+    }
+    .google-popup { 
+      display: none; 
+      position: absolute; 
+      bottom: 64px; 
+      right: 0; 
+      width: 300px; 
+      background: #fff; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18); 
+      padding: 18px; 
+      z-index: 99999; 
+      text-align: left; 
+    }
+    .google-popup.show { 
+      display: block; 
+    }
+    .popup-header { 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+      margin-bottom: 10px; 
+    }
+    .popup-header img { 
+      width: 30px; 
+      height: 30px; 
+    }
+    .popup-title { 
+      font-weight: 800; 
+      font-size: 14px; 
+      color: #111; 
+    }
+    .popup-subtitle { 
+      font-size: 12px; 
+      color: #666; 
+    }
+    .popup-desc { 
+      font-size: 12px; 
+      color: #444; 
+      line-height: 1.5; 
+      margin-bottom: 10px; 
+    }
+    .popup-link { 
+      font-size: 12px; 
+      color: #1a73e8; 
+      text-decoration: none; 
+      font-weight: 600; 
+    }
+    .popup-divider { 
+      border: none; 
+      border-top: 1px solid #eee; 
+      margin: 12px 0; 
+    }
+    .popup-row { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      margin-bottom: 9px; 
+    }
+    .popup-row-label { 
+      font-size: 13px; 
+      font-weight: 700; 
+      color: #111; 
+    }
+    .popup-row-sub { font-size: 11px; color: #777; }
+    .popup-rating { 
+      display: flex; 
+      align-items: center; 
+      gap: 5px; 
+      font-size: 13px; 
+      font-weight: 600; 
+    }
+    .dot { 
+      width: 10px; height: 10px; 
+      background: #34a853; 
+      border-radius: 50%; 
+      display: inline-block; 
+      flex-shrink: 0; 
+    }
+
+    /* ── Page Hero ── */
+    .page-hero { 
+      background: #111; 
+      color: #fff; 
+      padding: 48px 20px 40px; 
+      text-align: center; 
+    }
+    .page-hero h1 { 
+      font-size: 36px; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      letter-spacing: 3px; 
+      margin-bottom: 10px; 
+    }
+    .page-hero p { 
+      font-size: 14px; 
+      color: #aaa; 
+      font-weight: 400; 
+      max-width: 500px; 
+      margin: 0 auto; 
+    }
+
+    /* ── Terms Content ── */
+    .terms-section { 
+      background: #f7f7f7; 
+      padding: 60px 0; 
+    }
+
+    .terms-wrap {
+      background: #fff;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 50px 56px;
+    }
+
+    /* Table of Contents */
+    .toc {
+      background: #f7f7f7;
+      border-left: 4px solid #e8c24c;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .toc-title { 
+      font-size: 17px; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      color: #111; 
+      margin-bottom: 12px; 
+    }
+    .toc a { 
+      display: block; 
+      font-size: 17px; 
+      font-weight: 400; 
+      color: #444; 
+      text-decoration: none; 
+      padding: 3px 0; 
+    }
+    .toc a:hover {
+      color: red; 
+    }
+
+
+    /* Last updated badge */
+    .last-updated {
+      display: inline-block;
+      background: #111;
+      color: #e8c24c;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 5px 14px;
+      margin-bottom: 28px;
+    }
+
+    /* Intro notice */
+    .terms-notice {
+      background: #fffbef;
+      border: 1.5px solid #e8c24c;
+      padding: 18px 22px;
+      margin-bottom: 36px;
+      font-size: 17px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.8;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* Section headings */
+    .terms-section-title {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #111;
+      border-bottom: 2px solid #111;
+      padding-bottom: 8px;
+      margin: 36px 0 16px;
+    }
+
+    /* Sub headings */
+    .terms-sub {
+      font-size: 19px;
+      font-weight: bold;
+      color: #111;
+      margin: 22px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Body text */
+    .terms-body {
+      font-size: 18px;
+      font-weight: 400;
+      color: #555;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .terms-body ul { 
+      padding-left: 22px; 
+      margin-top: 8px; 
+    }
+    .terms-body ul li { 
+      margin-bottom: 6px; 
+    }
+    .terms-body a { 
+      color: #111; 
+      text-decoration: underline; 
+    }
+    .terms-body a:hover { 
+      color: red; 
+    }
+
+    /* Contact box */
+    .terms-contact {
+      background: #111;
+      color: #fff;
+      padding: 28px 32px;
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .terms-contact-item { 
+      flex: 1; 
+      min-width: 200px; 
+    }
+    .terms-contact-label { 
+      font-size: 11px; 
+      text-transform: uppercase; 
+      letter-spacing: 1px; 
+      color: #e8c24c; 
+      margin-bottom: 6px;
+    }
+    .terms-contact-val { 
+      font-size: 18px; 
+      font-weight: 400; 
+      color: #fff; 
+      line-height: 1.6; 
+    }
+
+    /* ── Footer ── */
+    .footer { 
+      background: #000; 
+      padding: 40px 0; 
+    }
+    .footer h6 { 
+      font-weight: bold; 
+      margin-bottom: 15px; 
+    }
+    .footer-links { 
+      list-style: none; 
+      padding: 0; 
+    }
+    .footer-links li { 
+      margin-bottom: 8px; 
+    }
+    .footer-links a { 
+      color: #fff; 
+      text-decoration: none; 
+    }
+    .footer-links a:hover { 
+      color: red; 
+      text-decoration: underline; 
+    }
+    .footer-line { 
+      border-color: #333; 
+      margin: 30px 0; 
+    }
+    .payments { 
+      margin-top: 15px; 
+    }
+    .payments i { 
+      font-size: 40px; 
+      color: white; 
+      margin: 0 15px; 
+      opacity: 1; 
+    }
+    .payments i:hover { 
+      transform: scale(1.2); 
+      transition: 0.3s; 
+    }
+    .social-icons a { 
+      text-decoration: none; 
+    }
+    .social-icons i { 
+      color: white; 
+      margin: 0 8px; 
+      font-size: 25px; 
+      cursor: pointer; 
+    }
+    .social-icons i:hover { 
+      color: red; 
+      transform: scale(1.4); 
+      transition: 0.3s; 
+    }
+    .signup-title { 
+      color: #fff; 
+    }
+    .signup-form { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      max-width: 600px; 
+      margin: auto; 
+    }
+    .signup-form input { 
+      flex: 1; 
+      padding: 14px; 
+      border: none; 
+      outline: none; 
+      font-size: 14px; 
+      background: #e5e5e5; 
+      border-radius: 0; }
+    .signup-form button { 
+      padding: 14px 30px; 
+      background: black; 
+      color: white; 
+      border: 1px solid #999; 
+      font-weight: bold; 
+      cursor: pointer; 
+      border-radius: 0; 
+    }
+    .signup-form button:hover { 
+      background: #111; 
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 991px) {
+      .header-row-1 { 
+        display: flex; 
+        align-items: stretch; 
+        background: #222; 
+        overflow: visible; 
+        position: relative; 
+        z-index: 999; 
+      }
+      .logo-nav-col {
+        flex: 1; 
+        min-width: 0; 
+        overflow: visible; 
+      }
+      .logo-nav-wrap { 
+        width: 100%; 
+      }
+      .logo { height: 48px; 
+        padding-left: 6px; 
+        flex-shrink: 0; 
+      }
+      .logo img { 
+        height: 36px; 
+      }
+      .n { 
+        flex: 1; 
+        min-width: 0; 
+        gap: 0;
+        padding: 0; 
+        height: 48px; 
+        min-height: 48px; 
+        overflow: hidden; 
+      }
+      .menu-item { 
+        flex: 1; 
+        min-width: 0; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+      }
+      .n a { 
+        font-size: 10px; 
+        padding: 4px 3px; 
+        white-space: nowrap; 
+        text-align: center; 
+        width: 100%; 
+      }
+      .icons-col { 
+        flex-shrink: 0; 
+        display: flex; 
+        align-items: center; 
+        padding: 0 8px; 
+        background: #222; 
+      }
+      .icons { 
+        gap: 10px; 
+      }
+      .icons i { 
+        margin-left: 0; 
+        font-size: 16px; 
+      }
+      .header-row-2 { 
+        display: flex; 
+        align-items: center; 
+        background: #222;
+        padding: 5px 8px; 
+        gap: 8px; 
+      }
+      .everyday-btn-col { 
+        flex-shrink: 0; 
+      }
+      .everyday-btn a { 
+        font-size: 11px; 
+        padding: 5px 10px; 
+      }
+      .search-col { 
+        flex: 1; }
+      .search input { 
+        height: 32px; 
+      }
+      .terms-wrap { 
+        padding: 28px 18px; 
+      }
+      .page-hero h1 { 
+        font-size: 26px; 
+      }
+      .terms-contact { 
+        padding: 20px 18px; 
+      }
+    }
+
+    @media (min-width: 992px) {
+      .header-row-1 { 
+        display: none !important; 
+      }
+      .header-row-2 { 
+        display: none !important; 
+      }
+      .desktop-header { 
+        display: flex !important; 
+      }
+    }
+    @media (max-width: 991px) {
+      .desktop-header { 
+        display: none !important; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Login Modal ── -->
+  <div class="login-overlay" id="loginOverlay" onclick="closeLoginOnOverlay(event)">
+    <div class="login-box">
+      <button class="login-close" onclick="closeLogin()">&#10005;</button>
+      <div class="login-logo"><img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg"></div>
+      <div class="login-title">Welcome Back</div>
+      <div class="login-sub">Sign in to your Urban Step account</div>
+      <div class="login-tabs">
+        <div class="login-tab active" onclick="switchTab('login')">Login</div>
+        <div class="login-tab" onclick="switchTab('signup')">Sign Up</div>
+      </div>
+      <div class="tab-panel active" id="panel-login">
+        <div class="login-field">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="login-field">
+          <input type="password" placeholder="Password">
+        </div>
+        <div class="login-forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <button class="login-btn">Login</button>
+        <div class="login-or">or</div>
+        <button class="login-google">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"> Continue with Google</button>
+      </div>
+      <div class="tab-panel" id="panel-signup">
+        <div class="login-field">
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="login-field">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="login-field">
+          <input type="password" placeholder="Password">
+        </div>
+        <div class="login-field">
+          <input type="password" placeholder="Confirm Password">
+        </div>
+        <button class="login-btn">Create Account</button>
+        <div class="login-or">or</div>
+        <button class="login-google">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"> Continue with Google</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Marquee ── -->
+  <div class="container-fluid p-0" style="background:#000;">
+    <div class="row g-0"><div class="col-12">
+      <div class="marquee"><div class="marquee-text">
+        <a href="#">Our #EverydayRaces Sport Shoes Collection Live</a>
+        <span>2 Million + Happy Customers</span>
+        <span>Free Shipping on prepaid orders.</span>
+      </div></div>
+    </div></div>
+  </div>
+
+  <!-- ── Sticky Nav ── -->
+  <div class="nav-sticky-wrap" id="navStickyWrap">
+
+    <!-- Desktop Header -->
+    <div class="row align-items-center g-2 desktop-header">
+      <div class="col-lg-2 col-md-3 col-6 order-1">
+        <div class="logo"><img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg"></div>
+      </div>
+      <div class="col-lg-4 col-md-9 col-6 order-2">
+        <nav class="n">
+          <div class="menu-item m">
+            <a href="#">Women</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Sneakers</a>
+              <a href="#">Loafers</a>
+              <a href="#">Slip-Ons</a>
+              <a href="#">#EverydayRaces Sport Shoes</a>
+              <a href="#">Sandals</a>
+              <a href="#">Flats</a>
+              <a href="#">Slippers</a>
+              <a href="#">Sliders</a>
+              <a href="#">Clogs</a>
+              <a href="#">Boots</a>
+              <a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Men</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Sneakers</a>
+              <a href="#">Loafers</a>
+              <a href="#">Slip-Ons</a>
+              <a href="#">#EverydayRaces Sport Shoes</a>
+              <a href="#">Sandals</a>
+              <a href="#">Big Size</a>
+              <a href="#">Slippers</a>
+              <a href="#">Sliders</a>
+              <a href="#">Clogs</a>
+              <a href="#">Boots</a>
+              <a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Kids</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Slippers</a>
+              <a href="#">Clogs</a></div></div>
+          <div class="menu-item m">
+            <a href="#">Brands</a>
+            <div class="dropdown-menu-custom">
+              <a href="#">Gucci</a>
+              <a href="#">Puma</a>
+              <a href="#">Nike</a>
+              <a href="#">Clarks</a>
+              <a href="#">Timberlands</a>
+              <a href="#">Stuart Weitzman</a>
+              <a href="#">Steve Madden</a>
+              <a href="#">Nike Kids</a>
+              <a href="#">Geox Kids</a>
+              <a href="#">Red Tape</a>
+              <a href="#">View all</a>
+            </div>
+          </div>
+          <div class="menu-item m">
+            <a href="#">Sale</a>
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-2 col-md-3 col-4 order-3">
+        <div class="everyday-btn"><a href="#">#EVERYDAYRACES SPORT SHOES ⚡</a></div>
+      </div>
+      <div class="col-lg-2 col-md-8 col-5 order-4">
+        <div class="search"><input type="text" placeholder="Search" autocomplete="off"></div>
+      </div>
+      <div class="col-lg-2 col-md-4 col-3 order-5">
+        <div class="icons">
+          <a href="javascript:void(0)" onclick="openLogin()"><i class="fa fa-user"></i></a>
+          <a href="#" class="heart-badge"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+          <a href="#" class="heart-badge"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Header Row 1 -->
+    <div class="header-row-1">
+      <div class="logo-nav-col">
+        <div class="logo-nav-wrap">
+          <div class="logo">
+            <img src="https://www.shutterstock.com/image-vector/creative-modern-letter-u-logo-600nw-2657043749.jpg">
+          </div>
+          <nav class="n">
+            <div class="menu-item">
+              <a href="#">Women</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Sneakers</a>
+                <a href="#">Loafers</a>
+                <a href="#">Slip-Ons</a>
+                <a href="#">#EverydayRaces Sport Shoes</a>
+                <a href="#">Sandals</a>
+                <a href="#">Flats</a>
+                <a href="#">Slippers</a>
+                <a href="#">Sliders</a>
+                <a href="#">Clogs</a>
+                <a href="#">Boots</a>
+                <a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Men</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Sneakers</a>
+                <a href="#">Loafers</a>
+                <a href="#">Slip-Ons</a>
+                <a href="#">#EverydayRaces Sport Shoes</a>
+                <a href="#">Sandals</a>
+                <a href="#">Big Size</a>
+                <a href="#">Slippers</a>
+                <a href="#">Sliders</a>
+                <a href="#">Clogs</a>
+                <a href="#">Boots</a>
+                <a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Kids</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Slippers</a>
+                <a href="#">Clogs</a>
+              </div>
+            </div>
+            <div class="menu-item">
+              <a href="#">Brands</a>
+              <div class="dropdown-menu-custom">
+                <a href="#">Gucci</a>
+                <a href="#">Puma</a>
+                <a href="#">Nike</a>
+                <a href="#">Clarks</a>
+                <a href="#">Timberlands</a>
+                <a href="#">Stuart Weitzman</a>
+                <a href="#">Steve Madden</a>
+                <a href="#">Nike Kids</a>
+                <a href="#">Geox Kids</a>
+                <a href="#">Red Tape</a>
+                <a href="#">View all</a>
+              </div>
+            </div>
+            <div class="menu-item"><a href="#">Sale</a></div>
+          </nav>
+        </div>
+      </div>
+      <div class="icons-col">
+        <div class="icons">
+          <a href="javascript:void(0)" onclick="openLogin()"><i class="fa fa-user"></i></a>
+          <a href="#" class="heart-badge"><i class="fa fa-heart"></i><span class="badge-count">0</span></a>
+          <a href="#" class="heart-badge"><i class="fa fa-shopping-cart"></i><span class="badge-count">0</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-row-2">
+      <div class="everyday-btn-col"><div class="everyday-btn"><a href="#">#EVERYDAYRACES SPORT SHOES ⚡</a></div></div>
+      <div class="search-col"><div class="search"><input type="text" placeholder="Search" autocomplete="off"></div></div>
+    </div>
+
+  </div>
+
+  <!-- ── Page Hero ── -->
+  <div class="page-hero">
+    <h1>Terms &amp; Conditions</h1>
+    <p>Please read these terms carefully before using our website or placing an order.</p>
+  </div>
+
+  <!-- ── Terms Content ── -->
+  <section class="terms-section">
+    <div class="container">
+      <div class="terms-wrap">
+
+        <div class="last-updated">Last Updated: 19 Sep 2022</div>
+
+        <!-- Intro Legal Notice -->
+        <div class="terms-notice">
+          This document is an electronic record in terms of the Information Technology Act, 2000 and is published in accordance with applicable laws including the Consumer Protection (E-Commerce) Rules 2020. This electronic record is generated by a computer system and does not require any physical or digital signatures.
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+          <div class="toc-title">Contents</div>
+          <a href="#general">General Terms</a>
+          <a href="#products">Products</a>
+          <a href="#website">Website &amp; Account</a>
+          <a href="#payment">Payment &amp; Pricing</a>
+          <a href="#delivery">Delivery &amp; Tracking</a>
+          <a href="#warranties">Warranties &amp; Disclaimer</a>
+          <a href="#liability">Limitation of Liability</a>
+          <a href="#indemnification">Indemnification</a>
+          <a href="#privacy">Privacy</a>
+          <a href="#general2">General Provisions</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+
+        <!-- ── Section: General ── -->
+        <div id="general">
+          <div class="terms-section-title">General Terms</div>
+          <p class="terms-body">
+            Please read these Terms and Conditions ("T&amp;C") carefully. By accessing, browsing, or using <strong>www.urbanstep.in</strong> or any other website, mobile version or mobile application (together the "Website") or availing any of the products of <strong>Urban Step</strong> (referred to as "Company", "us" or "we"), you agree to be bound by all of the T&amp;C mentioned hereunder.
+          </p>
+          <p class="terms-body">
+            Only persons who can enter into a legally binding contract under the Indian Contract Act, 1872 can use the Website. Any minor who wishes to use or access the Website is required to do so through their legal guardian or parents. If you represent a company, partnership firm or sole proprietorship, you may access and use the Website on its behalf only if duly authorized by the necessary corporate action.
+          </p>
+          <p class="terms-body">
+            The Company reserves the right to amend or revise the T&amp;C at any time by uploading a revised version on the Website with or without prior notice. Your continued access or use of the Website following any changes constitutes your acceptance of the amended T&amp;C. We encourage you to review these T&amp;C each time you access or place an order.
+          </p>
+          <p class="terms-body">
+            You may only access the Website for lawful purposes. You are solely responsible for adherence to any and all laws, rules, and regulations pertaining to your use of the Website. We reserve the right to block any user and permanently disable their account if we believe, in our sole discretion, that the user has breached our fair usage policy or T&amp;C.
+          </p>
+        </div>
+
+        <!-- ── Section: Products ── -->
+        <div id="products">
+          <div class="terms-section-title">Products</div>
+
+          <div class="terms-sub">Terms of Offer</div>
+          <p class="terms-body">
+            The Website offers certain products ("Products") for sale, including trial products and products offered free of cost. By placing an order, you agree to the terms set forth in this T&amp;C. Products are for personal use only. You may not sell or resell any Products you receive from us unless otherwise agreed. We reserve the right to cancel or reduce quantities of any Products we believe, in our sole discretion, may result in a violation of our T&amp;C.
+          </p>
+          <p class="terms-body">
+            The Company may change, suspend, or discontinue the availability of any Products at any time without notice. While we endeavour to be as accurate as possible in describing our Products, we do not warrant that descriptions, colours, information, or other content on the Website are accurate, complete, reliable, or error-free. Product pictures are indicative and may not match the actual product.
+          </p>
+
+          <div class="terms-sub">Customer Solicitation</div>
+          <p class="terms-body">
+            By accessing the Website or placing an order, you agree to receive communications (including transactional, promotional and/or commercial messages) from the Company periodically. We may communicate via email, SMS, phone call, or by posting notices on the Website. You may opt out at any time by:
+          </p>
+          <div class="terms-body">
+            <ul>
+              <li>Using the opt-out link found in any email solicitation.</li>
+              <li>Sending an email to: <a href="mailto:rahulchauhan@gmail.com">rahulchauhan@gmail.com</a></li>
+              <li>Sending a written removal request to the above email address.</li>
+            </ul>
+          </div>
+
+          <div class="terms-sub">Proprietary Rights</div>
+          <p class="terms-body">
+            All brand names owned or licensed to the Company are its exclusive property, protected by laws of India including intellectual property laws. You shall not copy, reproduce, modify, re-sell, or re-distribute any product manufactured or distributed by the Company in whole or in part. The Company also has rights to all trademarks, trade dress, and specific layouts of this webpage, including calls to action, text placement, images, technology, content, software, and other materials.
+          </p>
+
+          <div class="terms-sub">Tax</div>
+          <p class="terms-body">If you purchase any Products, you will be responsible for paying any applicable taxes in relation to such purchase.</p>
+        </div>
+
+        <!-- ── Section: Website ── -->
+        <div id="website">
+          <div class="terms-section-title">Website &amp; Account</div>
+
+          <div class="terms-sub">Your Account</div>
+          <p class="terms-body">
+            You may create and hold one user account ("Account") only. You are responsible for maintaining the confidentiality of your account and password, and for restricting access to your computer. Each Account is non-transferable and may not be sold, traded, combined, or otherwise shared with any other person.
+          </p>
+          <p class="terms-body">
+            If you know or have reason to believe the security of your Account has been breached, contact us immediately. We may require you to change your password, or temporarily or permanently suspend your account. We reserve the right to refuse service and/or terminate accounts without prior notice if the T&amp;C are violated.
+          </p>
+
+          <div class="terms-sub">Content &amp; Intellectual Property</div>
+          <p class="terms-body">
+            The Company does not always create the information and content published on the Website. The Company expressly disclaims any and all liability in connection with third-party content. Any unauthorized use of our materials may violate copyright, trademark, and other laws. If you feel your work has been copied in a way that constitutes copyright infringement, contact us at <a href="mailto:rahulchauhan@gmail.com">rahulchauhan@gmail.com</a>.
+          </p>
+
+          <div class="terms-sub">Use of Website</div>
+          <p class="terms-body">You will not use the Website for any illegal purposes. You agree to:</p>
+          <div class="terms-body">
+            <ul>
+              <li>Abide by all applicable local, state, national, and international laws and regulations.</li>
+              <li>Not interfere with or disrupt the use and enjoyment of the Website by other users.</li>
+              <li>Not resell material on the Website.</li>
+              <li>Not engage in transmission of spam, chain letters, junk mail, or any unsolicited communication.</li>
+              <li>Not defame, harass, abuse, or disrupt other users of the Website.</li>
+              <li>Not post content that is harmful, obscene, pornographic, defamatory, or otherwise unlawful.</li>
+            </ul>
+          </div>
+
+          <div class="terms-sub">License</div>
+          <p class="terms-body">
+            By using this Website, you are granted a limited, non-exclusive, non-transferable right to use the content and materials on the Website in connection with your personal, non-commercial use only. You may not copy, reproduce, transmit, distribute, or create derivative works of such content without express written authorization from the Company.
+          </p>
+
+          <div class="terms-sub">Site Security</div>
+          <p class="terms-body">
+            You are prohibited from violating or attempting to violate the security of the Website, including accessing data not intended for you, probing or scanning vulnerability of any system, or attempting to interfere with service to any user or network. Violations may result in civil or criminal liability.
+          </p>
+
+          <div class="terms-sub">Chat Facility</div>
+          <p class="terms-body">The chat facility is provided to help with Website-related queries and is subject to the following conditions:</p>
+          <div class="terms-body">
+            <ul>
+              <li>The Company may suspend the chat service at any time without notice.</li>
+              <li>The Company is not responsible for any delay in replying to queries via chat.</li>
+              <li>Chat communications may be stored by the Company for future reference.</li>
+              <li>You may not communicate any unlawful, threatening, abusive, or obscene information via chat.</li>
+              <li>The chat shall not be used to sell products or solicit business opportunities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Section: Payment ── -->
+        <div id="payment">
+          <div class="terms-section-title">Payment &amp; Pricing</div>
+          <p class="terms-body">
+            Prices and availability of Products, offers, and services are subject to change without prior notice at the sole discretion of the Company. Prices displayed on the Website are inclusive of GST but do not include a delivery charge. For all orders under ₹399, a delivery charge of ₹40 shall be levied. All orders above ₹399 shall be delivered without any delivery charges.
+          </p>
+          <p class="terms-body">Payments can be made by:</p>
+          <div class="terms-body">
+            <ul>
+              <li>Credit Cards, Debit Cards, Net Banking, Wallets, UPI, QR, and PayPal.</li>
+              <li>Cash on Delivery (COD).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Section: Delivery ── -->
+        <div id="delivery">
+          <div class="terms-section-title">Delivery &amp; Tracking</div>
+          <p class="terms-body">
+            For orders containing multiple Products, delivery may be made in multiple shipments. Delivery usually takes 5–7 business days from the date of order placement. Estimated delivery times are indicative, and there may be unforeseeable delays beyond our control. If we are unable to deliver within the estimated date, you will be notified and may cancel the order or wait for delivery.
+          </p>
+          <p class="terms-body">
+            Upon dispatch, you will receive an email with the tracking number and courier details. Orders can also be tracked via the "Your Orders" option on your My Account page. Order status can be tracked after 24 hours from the time of dispatch.
+          </p>
+        </div>
+
+        <!-- ── Section: Warranties ── -->
+        <div id="warranties">
+          <div class="terms-section-title">Representations, Warranties &amp; Disclaimer</div>
+          <p class="terms-body">
+            Your use of the Website and/or Products are at your sole risk. The Website and Products are offered on an "as is" and "as available" basis. The Company expressly disclaims all warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+          </p>
+          <div class="terms-body">Without limiting the foregoing, the Company makes no warranty that:
+            <ul>
+              <li>The information provided on this Website is accurate, reliable, complete, or timely.</li>
+              <li>Links to third-party websites lead to accurate, reliable, or timely information.</li>
+              <li>Any advice or information obtained from this Website will create any warranty not expressly stated herein.</li>
+              <li>Any defects in Products will be corrected.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ── Section: Liability ── -->
+        <div id="liability">
+          <div class="terms-section-title">Limitation of Liability</div>
+          <p class="terms-body">
+            The Company will not be liable for any direct, indirect, incidental, special, or consequential damages or loss in connection with this T&amp;C or the Products in any manner, including liabilities resulting from: (a) the use or inability to use the Website content or Products; (b) the cost of procuring substitute products; (c) any products purchased or transactions entered into through the Website; or (d) any lost profits.
+          </p>
+          <p class="terms-body">
+            To the fullest extent permitted by applicable law, neither the Company nor its affiliates, partners, or licensors will be responsible or liable for: (a) interruption of business; (b) access delays or interruptions; (c) data non-delivery, loss, theft, or corruption; (d) loss from third-party websites; (e) viruses or system failures; (f) inaccuracies in content; or (g) events beyond the reasonable control of the Company.
+          </p>
+        </div>
+
+        <!-- ── Section: Indemnification ── -->
+        <div id="indemnification">
+          <div class="terms-section-title">Indemnification</div>
+          <p class="terms-body">
+            You will release, indemnify, defend, and hold harmless the Company and any of its contractors, agents, employees, officers, directors, shareholders, affiliates, and assigns from all liabilities, claims, damages, costs, and expenses, including reasonable attorney's fees, of third parties relating to or arising out of: (a) this T&amp;C or the breach of your warranties; (b) the Website content or your use thereof; (c) the Products or your use thereof; (d) any intellectual property or proprietary right of any person; (e) your violation of any provision of this T&amp;C; or (f) any information or data you supplied to the Company.
+          </p>
+        </div>
+
+        <!-- ── Section: Privacy ── -->
+        <div id="privacy">
+          <div class="terms-section-title">Privacy</div>
+          <p class="terms-body">
+            The Company believes strongly in protecting user privacy. Please refer to our <a href="privacy.html">Privacy Policy</a>, incorporated by reference herein, which is available on the Website. Your information is safe with us. We work with trusted third-party agencies for record-keeping purposes only.
+          </p>
+        </div>
+
+        <!-- ── Section: General Provisions ── -->
+        <div id="general2">
+          <div class="terms-section-title">General Provisions</div>
+
+          <div class="terms-sub">Force Majeure</div>
+          <p class="terms-body">The Company will not be held responsible for any cessation, interruption, or delay in performance of its obligations due to earthquake, storm, natural disaster, act of God, war, terrorism, armed conflict, labour strike, lockout, boycott, pandemic, epidemic, utility or communication failure, revolution, civil commotion, acts of public enemies, or any other cause beyond our reasonable control.</p>
+
+          <div class="terms-sub">Entire Agreement</div>
+          <p class="terms-body">This T&amp;C comprises the entire agreement between you and the Company and supersedes any prior agreements pertaining to the subject matter contained herein.</p>
+
+          <div class="terms-sub">Governing Law &amp; Jurisdiction</div>
+          <p class="terms-body">This T&amp;C shall be construed in accordance with the applicable laws of India. Any disputes shall be subject to the exclusive jurisdiction of competent courts/tribunals/forums in Rajkot, Gujarat, and the User agrees to such exclusive jurisdiction.</p>
+
+          <div class="terms-sub">Termination</div>
+          <p class="terms-body">The Company reserves the right to terminate your access to the Website if it reasonably believes, in its sole discretion, that you have breached any of the terms of this T&amp;C. Following termination, you will not be permitted to use the Website.</p>
+
+          <div class="terms-sub">Domestic Use</div>
+          <p class="terms-body">The Company makes no representation that the Website or Products are appropriate or available for use in locations outside India. Users who access the Website from outside India do so at their own risk.</p>
+
+          <div class="terms-sub">Waiver of Class Action Rights</div>
+          <p class="terms-body">By accepting the T&amp;C, you irrevocably waive any right to join claims with those of others in the form of a class action or similar procedural device. Any claims must be asserted individually.</p>
+
+          <div class="terms-sub">Assignment</div>
+          <p class="terms-body">You may not assign your rights and obligations under this T&amp;C to anyone. The Company may assign its rights and obligations in its sole discretion and without advance notice.</p>
+        </div>
+
+        <!-- ── Section: Contact ── -->
+        <div id="contact">
+          <div class="terms-section-title">Contact Us</div>
+          <p class="terms-body">Please contact us for any questions or comments regarding the Products or the Website, including all inquiries unrelated to copyright infringement.</p>
+          <p class="terms-body">By entering your phone number and submitting this form, you consent to receive marketing text messages from Urban Step at the number provided. Consent is not a condition of any purchase. Message and data rates may apply. You can unsubscribe at any time by replying STOP.</p>
+
+          <div class="terms-contact">
+            <div class="terms-contact-item">
+              <div class="terms-contact-label">Customer Service</div>
+              <div class="terms-contact-val">
+                Phone: +91-9XXXXXXXXX<br>
+                Email: rahulchauhan@gmail.com<br>
+                <span style="font-size:16px;color:#aaa;">Mon–Fri, 9:00 AM – 6:00 PM</span>
+              </div>
+            </div>
+            <div class="terms-contact-item">
+              <div class="terms-contact-label">Grievance &amp; Nodal Officer</div>
+              <div class="terms-contact-val">
+                Email: nodal-officer@urbanstep.in<br>
+                <span style="font-size:16px;color:#aaa;">Mon–Fri, 9:00 AM – 6:00 PM</span>
+              </div>
+            </div>
+            <div class="terms-contact-item">
+              <div class="terms-contact-label">Office Address</div>
+              <div class="terms-contact-val">Rajkot, Gujarat, India</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Floating WhatsApp Button ── -->
+  <div class="floating-btns">
+    <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="float-btn whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ── Floating Google Button ── -->
+  <div class="floating-btns-right">
+    <div class="google-popup" id="googlePopup">
+      <div class="popup-header">
+        <img src="https://www.gstatic.com/images/branding/product/2x/shopping_96dp.png" alt="Google">
+        <div><div class="popup-title">Top Quality Store</div><div class="popup-subtitle">on Google</div></div>
+      </div>
+      <p class="popup-desc">The Top Quality Store badge is awarded to merchants that provide a great shopping experience.</p>
+      <a href="#" class="popup-link">Learn more about Top Quality Store</a>
+      <hr class="popup-divider">
+      <div class="popup-row">
+        <div>
+          <div class="popup-row-label">Delivery</div>
+          <div class="popup-row-sub">Free 3-5 day delivery</div>
+        </div>
+        <div class="popup-rating"><span class="dot"></span> Great</div>
+      </div>
+      <div class="popup-row">
+        <div>
+          <div class="popup-row-label">Returns</div>
+          <div class="popup-row-sub">7-day returns for most items</div>
+        </div>
+        <div class="popup-rating"><span class="dot"></span> Exceptional</div>
+      </div>
+      <div class="popup-row">
+        <div>
+          <div class="popup-row-label">Competitive pricing</div>
+        </div>
+        <div class="popup-rating"><span class="dot"></span> Good</div>
+      </div>
+      <div class="popup-row">
+        <div>
+          <div class="popup-row-label">Payment options</div>
+        </div>
+        <div class="popup-rating"><span class="dot"></span> Great</div>
+      </div>
+      <hr class="popup-divider">
+      <a href="#" class="popup-link">More about this shop</a>
+    </div>
+    <button class="google-badge-btn" id="googleBadgeBtn" onclick="toggleGooglePopup()">
+      <img src="https://www.gstatic.com/images/branding/productlogos/top_quality_store/v1/192px.svg" alt="Google">
+      <span class="badge-text">Top Quality Store on Google</span>
+    </button>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-md-6">
+          <div class="newsletter text-center">
+            <p class="signup-title">STAY CONNECTED WITH US</p>
+            <div class="signup-form">
+              <input type="email" placeholder="ENTER YOUR EMAIL ADDRESS HERE">
+              <button>SIGN UP</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row text-white mt-4 ms-5">
+      <div class="col-md-4">
+        <h6>GET IN TOUCH</h6>
+        <p>Mail: rahulchauhan@gmail.com</p>
+        <p>Call: +91-9XXXXXXXXX</p>
+        <p>Chat: +91-9XXXXXXXXX (Whatsapp)</p>
+        <p>Rajkot, India</p>
+      </div>
+      <div class="col-md-4">
+        <h6>SHOP</h6>
+        <ul class="footer-links">
+          <li><a href="javascript:void(0)" onclick="openLogin()">My Account</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="track.html">Track your order</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ's</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6>COMPANY</h6>
+        <ul class="footer-links">
+          <li><a href="know2.html">Our Story</a></li>
+          <li><a href="know.html">Our Technology</a></li>
+          <li><a href="exchange.html">Returns &amp; Exchange Policy</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="redresel.html">Grievance Redressal</a></li>
+          <li><a href="condition.html">Terms & Condition</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-line">
+    <div class="text-center mb-3">
+      <p class="text-white">100% Secure Payments | 7-Day Return &amp; Exchange</p>
+      <div class="payments text-center">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+        <i class="fa-brands fa-cc-discover"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-stripe"></i>
+        <i class="fa-brands fa-cc-amazon-pay"></i>
+        <i class="fa-brands fa-google-pay"></i>
+        <i class="fa-solid fa-credit-card"></i>
+      </div>
+    </div>
+    <div class="text-center social-icons pb-3">
+      <p class="text-white">FOLLOW US</p>
+      <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    document.querySelectorAll('.menu-item > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var dropdown = this.parentElement.querySelector('.dropdown-menu-custom');
+        if (!dropdown) return;
+        e.preventDefault(); e.stopPropagation();
+        var isOpen = dropdown.classList.contains('open');
+        document.querySelectorAll('.dropdown-menu-custom').forEach(function(d) { d.classList.remove('open'); d.style.display = 'none'; d.style.position = d.style.top = d.style.left = d.style.width = d.style.zIndex = ''; });
+        if (!isOpen) {
+          var rect = this.parentElement.getBoundingClientRect();
+          dropdown.style.position = 'fixed'; dropdown.style.top = rect.bottom + 'px'; dropdown.style.left = rect.left + 'px'; dropdown.style.width = '180px'; dropdown.style.zIndex = '99999'; dropdown.style.display = 'flex'; dropdown.classList.add('open');
+        }
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.menu-item')) { document.querySelectorAll('.dropdown-menu-custom').forEach(function(d) { d.classList.remove('open'); d.style.display = 'none'; }); }
+      if (!e.target.closest('.floating-btns-right')) { document.getElementById('googlePopup').classList.remove('show'); }
+    });
+
+    var navWrap = document.getElementById('navStickyWrap');
+    window.addEventListener('scroll', function() { navWrap.classList.toggle('nav-scrolled', window.scrollY > 40); });
+    setTimeout(function() { document.getElementById('googleBadgeBtn').classList.add('shrunk'); }, 3000);
+    function toggleGooglePopup() { document.getElementById('googlePopup').classList.toggle('show'); }
+    function openLogin() { document.getElementById('loginOverlay').classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeLogin() { document.getElementById('loginOverlay').classList.remove('active'); document.body.style.overflow = ''; }
+    function closeLoginOnOverlay(e) { if (e.target === document.getElementById('loginOverlay')) closeLogin(); }
+    function switchTab(tab) {
+      document.querySelectorAll('.login-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelector('.login-tab[onclick="switchTab(\'' + tab + '\')"]').classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    }
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLogin(); });
+
+    /* Smooth scroll for TOC links */
+    document.querySelectorAll('.toc a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
